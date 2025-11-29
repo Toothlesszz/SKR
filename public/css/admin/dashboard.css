@@ -1,0 +1,602 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #f8f9fa;
+}
+
+
+/* Container / reset cơ bản */
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.45rem 0.8rem;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    font-size: 0.95rem;
+    line-height: 1;
+    color: #0f172a;
+    /* text color */
+    background: #f1f5f9;
+    /* light background */
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+    box-shadow: 0 1px 0 rgba(15, 23, 42, 0.03);
+}
+
+
+/* Arrow icon styling */
+
+.btn-back .icon {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transform-origin: center;
+}
+
+
+/* Smaller variant (optional) */
+
+.btn-back.small {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.85rem;
+    border-radius: 8px;
+}
+
+
+/* Hover / focus */
+
+.btn-back:hover,
+.btn-back:focus {
+    transform: translateX(-3px);
+    /* slight left movement for 'back' feeling */
+    background: #e2e8f0;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+    outline: none;
+}
+
+
+/* Active (mouse down) */
+
+.btn-back:active {
+    transform: translateX(-1px) scale(0.995);
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.06);
+}
+
+
+/* Keyboard accessibility focus ring */
+
+.btn-back:focus-visible {
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.12), 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+
+/* Optional small icon-only style */
+
+.btn-back.icon-only {
+    padding: 0.45rem;
+    width: 40px;
+    justify-content: center;
+}
+
+.btn-back.icon-only .label {
+    display: none;
+}
+
+
+/* Dark mode friendly (simple) */
+
+@media (prefers-color-scheme: dark) {
+    .btn-back {
+        color: #e6eef8;
+        background: #28a745;
+        border-color: rgba(255, 255, 255, 0.06);
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.02);
+    }
+    .btn-back:hover {
+        background: #28a650;
+        box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6);
+    }
+}
+
+
+/* Header */
+
+.admin-header {
+    background: white;
+    padding: 16px 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.logo-circle {
+    width: 50px;
+    height: 50px;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+nav a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    padding: 6px 0;
+    position: relative;
+}
+
+nav a.active,
+nav a:hover {
+    color: #00b56a;
+}
+
+nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #00b56a;
+    border-radius: 1px;
+}
+
+.social-icons i {
+    width: 32px;
+    height: 32px;
+    background: #eee;
+    color: #666;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.social-icons i:hover {
+    background: #ddd;
+}
+
+
+/* Main */
+
+.dashboard-container {
+    max-width: 1000px;
+    margin: 32px auto;
+    padding: 0 16px;
+}
+
+.system-section {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.section-header .title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.section-header i {
+    color: #00b56a;
+    font-size: 20px;
+}
+
+.section-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.section-header p {
+    font-size: 13px;
+    color: #777;
+    margin-top: 2px;
+}
+
+
+/* Config Box */
+
+.config-box {
+    margin-bottom: 32px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.config-box:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.config-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.config-header h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.edit-btn {
+    background: #f0f0f0;
+    color: #333;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.edit-btn:hover {
+    background: #e0e0e0;
+}
+
+
+/* Banner Preview */
+
+.banner-preview {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.banner-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Contact Table */
+
+.contact-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14px;
+}
+
+.contact-table th {
+    text-align: left;
+    padding: 10px 12px;
+    background: #f9f9f9;
+    color: #555;
+    font-weight: 600;
+    border-bottom: 1px solid #eee;
+}
+
+.contact-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.contact-table a {
+    color: #0040c1;
+    text-decoration: none;
+}
+
+.contact-table a:hover {
+    text-decoration: underline;
+}
+
+
+/* Modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    padding: 16px 20px;
+    background: #f8f9fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-header h3 {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.modal-header .close {
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+}
+
+.modal-header .close:hover {
+    color: #333;
+}
+
+#bannerForm,
+#contactForm {
+    padding: 20px;
+}
+
+#bannerForm label,
+#contactForm label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+#bannerForm input,
+#contactForm input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+#bannerForm input:focus,
+#contactForm input:focus {
+    outline: none;
+    border-color: #0040c1;
+    box-shadow: 0 0 0 3px rgba(0, 64, 193, 0.1);
+}
+
+#contactInputs>div {
+    margin-bottom: 16px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.save-btn {
+    background: #00b56a;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.save-btn:hover {
+    background: #009a5a;
+}
+
+.cancel-btn {
+    background: #f0f0f0;
+    color: #333;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cancel-btn:hover {
+    background: #e0e0e0;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .admin-header {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+    nav {
+        order: 3;
+    }
+    .banner-preview {
+        height: 150px;
+    }
+}
+
+
+/* === BANNER GRID === */
+
+.banner-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.banner-thumb {
+    position: relative;
+    height: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.banner-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-thumb .label {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+
+/* === MODAL BANNER INPUT GROUP === */
+
+.banner-input-group {
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.banner-input-group:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.banner-input-group h4 {
+    margin: 0 0 12px 0;
+    font-size: 15px;
+    color: #0040c1;
+}
+
+
+/* === MODAL COMPACT + SCROLL === */
+
+.modal-content.compact {
+    width: 90%;
+    max-width: 460px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.modal-body.scrollable {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background: #fafafa;
+}
+
+
+/* === BANNER EDIT ITEM === */
+
+.banner-edit-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding: 12px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.input-group {
+    flex: 1;
+}
+
+.input-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #0040c1;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #0040c1;
+    box-shadow: 0 0 0 2px rgba(0, 64, 193, 0.15);
+}
+
+.preview {
+    width: 120px;
+    height: 68px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* === FORM ACTIONS === */
+
+.form-actions {
+    padding: 16px 20px;
+    background: white;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}

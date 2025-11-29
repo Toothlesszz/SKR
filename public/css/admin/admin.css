@@ -1,0 +1,278 @@
+/* Reset cơ bản */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Container / reset cơ bản */
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.45rem 0.8rem;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    font-size: 0.95rem;
+    line-height: 1;
+    color: #0f172a;
+    /* text color */
+    background: #f1f5f9;
+    /* light background */
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+    box-shadow: 0 1px 0 rgba(15, 23, 42, 0.03);
+}
+
+
+/* Arrow icon styling */
+
+.btn-back .icon {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transform-origin: center;
+}
+
+
+/* Smaller variant (optional) */
+
+.btn-back.small {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.85rem;
+    border-radius: 8px;
+}
+
+
+/* Hover / focus */
+
+.btn-back:hover,
+.btn-back:focus {
+    transform: translateX(-3px);
+    /* slight left movement for 'back' feeling */
+    background: #e2e8f0;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+    outline: none;
+}
+
+
+/* Active (mouse down) */
+
+.btn-back:active {
+    transform: translateX(-1px) scale(0.995);
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.06);
+}
+
+
+/* Keyboard accessibility focus ring */
+
+.btn-back:focus-visible {
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.12), 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+
+/* Optional small icon-only style */
+
+.btn-back.icon-only {
+    padding: 0.45rem;
+    width: 40px;
+    justify-content: center;
+}
+
+.btn-back.icon-only .label {
+    display: none;
+}
+
+
+/* Dark mode friendly (simple) */
+
+@media (prefers-color-scheme: dark) {
+    .btn-back {
+        color: #e6eef8;
+        background: #28a745;
+        border-color: rgba(255, 255, 255, 0.06);
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.02);
+    }
+    .btn-back:hover {
+        background: #28a650;
+        box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6);
+    }
+}
+
+
+/* Nền xanh nhạt toàn màn hình */
+
+body {
+    background: linear-gradient(135deg, #e8fff2, #dffff1);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+/* Container chính */
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+
+/* Hộp đăng nhập */
+
+.login-box {
+    background: white;
+    padding: 40px 50px;
+    border-radius: 14px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    width: 100%;
+}
+
+
+/* Icon khiên */
+
+.login-icon {
+    background-color: #00b56a;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+}
+
+.login-icon i {
+    font-size: 28px;
+    color: white;
+}
+
+
+/* Tiêu đề */
+
+.login-box h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.login-box p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+
+/* Label */
+
+.login-box label {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+
+/* Nhóm input - DÀI RA NHƯ ẢNH */
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background-color: #f6f6f6;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    transition: border 0.2s;
+    width: 100%;
+    /* <-- THÊM DÒNG NÀY */
+}
+
+.input-group:focus-within {
+    border-color: #0040c1;
+}
+
+.input-group i {
+    color: #888;
+    margin-right: 8px;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    flex: 1;
+    background: none;
+    font-size: 15px;
+    color: #333;
+    width: 100%;
+    /* <-- THÊM DÒNG NÀY */
+}
+
+.input-group input::placeholder {
+    color: #aaa;
+}
+
+
+/* Nút */
+
+button {
+    width: 100%;
+    background-color: #0040c1;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0030a1;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+
+/* Gợi ý */
+
+.hint {
+    font-size: 12px;
+    color: #777;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+.hint strong {
+    color: #0040c1;
+}
+
+
+/* Responsive */
+
+@media (max-width: 480px) {
+    .login-box {
+        padding: 30px 35px;
+    }
+    .login-container {
+        max-width: 340px;
+    }
+}

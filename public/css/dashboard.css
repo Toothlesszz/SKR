@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  background: #f7f9fc;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+}
+
+/* Header */
+.admin-header {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.logo-circle {
+  background: #0f9d58;
+  color: #fff;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* Nav menu */
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a.active {
+  color: #0f9d58;
+}
+
+nav a:hover {
+  color: #0f9d58;
+}
+
+/* Icon */
+.social-icons {
+  display: flex;
+  gap: 10px;
+  color: #0f9d58;
+}
+
+.social-icons i {
+  background: #e7f9ee;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-icons i:hover {
+  background: #0f9d58;
+  color: #fff;
+}
+
+/* Main container */
+.dashboard-container {
+  padding: 30px 80px;
+}
+
+/* Section box */
+.system-section {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 25px;
+}
+
+/* Header of section */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.section-header .title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.section-header .title i {
+  font-size: 20px;
+  color: #0f9d58;
+}
+
+.section-header h3 {
+  margin: 0;
+  color: #222;
+}
+
+.section-header p {
+  margin: 0;
+  color: #777;
+  font-size: 13px;
+}
+
+/* Edit button */
+.edit-btn {
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #333;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.edit-btn:hover {
+  background: #0f9d58;
+  color: #fff;
+}
+
+/* Banner */
+.banner-box img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Contact table */
+.contact-box {
+  margin-top: 25px;
+}
+
+.contact-box table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.contact-box th,
+.contact-box td {
+  border: 1px solid #e6e6e6;
+  padding: 10px 15px;
+  text-align: left;
+}
+
+.contact-box th {
+  background: #f9f9f9;
+  font-weight: 600;
+}
+
+.contact-box a {
+  color: #0f5adb;
+  text-decoration: none;
+}

@@ -24,7 +24,7 @@ jobs:
           server: ftpupload.net
           username: if0_40555390
           password: QkbKbjeX1R
-          server-dir: xediensakura.free.nf/htdocs  # For addon domains
+          server-dir: xediensakura.free.nf/htdocs/  # For addon domains
           timeout: 86400000
           log-level: standard
 
